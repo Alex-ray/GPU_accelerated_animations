@@ -1,0 +1,163 @@
+
+/******************
+  Change here
+*******************/
+/*.color-wheel-wrapper.non-composite  { display: none; }*/
+/*.color-wheel-wrapper.composite      { display: none; }*/
+/*.color-wheel-wrapper.composite-spin { display: none; }*/
+
+/******************
+  Defaults
+*******************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+    background-color: rgb( 45, 47, 49 ) ;
+    min-width: 100%;
+    height: 100%;
+}
+
+/******************
+  Buttons
+*******************/
+
+.button.round { border-radius: 2em; }
+
+.button {
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  text-align: center;
+  font-family: 'helvetica' ;
+  color: rgb( 45, 47, 49) ;
+  margin-right: 0.5em;
+  background-color: rgb( 245, 247, 249) ;
+  -webkit-user-select: none;
+  transition: all 0.05s ease-in-out;
+}
+
+.button:hover { cursor: pointer; }
+
+
+/******************
+  Color Wheels
+*******************/
+
+.color-wheel-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.color-wheel.spin {
+  -webkit-animation: spin 0.05s infinite linear ;
+}
+
+.color-wheel {
+    width: 250px;
+    height: 250px;
+    background-image: url('./images/color_wheel_730.png');
+    background-position: center;
+    background-size: contain;
+    background-size: contain ;
+}
+
+/******************
+  Controls
+******************/
+.controls {
+  position: fixed;
+  top: 50px;
+  left: 25px;
+}
+
+.control-wrapper {
+  overflow: hidden ;
+}
+
+.control-title {
+  color: rgb( 245, 247, 249 ) ;
+  font-size: 1.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  text-align: left;
+  line-height: 1.5em;
+  margin: 0.35em 0;
+  font-family: 'Helvetica' ;
+}
+
+.control-input-wrapper {
+  margin-bottom: 1em;
+  margin-top: 0.75em;
+}
+
+/******************
+  Radio inputs
+*******************/
+.slider-wrapper {
+  height: 35px ;
+  width: 75px;
+  border-radius: 50px;
+  background-color: gray ;
+  position: relative;
+  background-color: rgb(219, 74, 56) ;
+  transition: background-color 0.125s ease-in 0.025s ;
+}
+
+.slider-wrapper:hover { cursor: pointer; }
+
+.slider-toggle {
+  width: 31px;
+  height: 31px;
+  border-radius: 33px;
+  background-color: rgb( 245, 247, 249) ;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: left 0.15s ease-in ;
+}
+
+.slider-wrapper.on {
+  background-color: rgb(53, 172, 25) ;
+}
+
+.slider-wrapper.on .slider-toggle {
+  left: 41px;
+}
+
+
+/******************
+  Speed buttons
+*******************/
+.speed-controls li {
+  display: inline-block;
+  vertical-align: top;
+  font-family: 'Helvetica' ;
+}
+
+.speed-toggle-value {
+  line-height: 1em;
+  width: 1.125em;
+  text-align: center;
+  font-size: 2em;
+  margin-right: 0.25em;
+  color: rgb( 245, 247, 249) ;
+  text-shadow: rgb( 145, 147, 149) 0 1px 0px ;
+}
+
+/******************
+  CSS Animations
+*******************/
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate( 0deg ) ;
+  }
+  100% {
+    transform: rotate( 360deg ) ;
+  }
+}
