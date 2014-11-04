@@ -220,7 +220,7 @@ With that out of the way lets jump right in and take a look at what kind of anim
 
 Your screen should now look something like this.
 
-<img src="/images/posts/the_web_animations_you_have_always_wanted/timeline-tab.png" >
+<img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-tab.png" >
 
 <!-- Image at /images/timeline-tab.png BOOG: NEEDS COMPRESSION-->
 
@@ -228,7 +228,7 @@ The time line view lets you measure and visualizes the rendering process on a fr
 
 We can start recording a time line by clicking on the gray circle in the left hand corner of the developer tools. Press it to start recording, wait a second and press it a second time to stop recording ( it should be red this time ). You will then see a bar graph that looks something similar to this.
 
-<img src="/images/posts/the_web_animations_you_have_always_wanted/timeline-graph.png" >
+<img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-graph.png" >
 
 <!-- Image at /images/timeline-graph.png BOOG: NEEDS COMPRESION -->
 
@@ -249,7 +249,7 @@ The most obvious way to speed things up and improve our frame rate is to minimiz
 
 To do this we are going to "hardware accelerate" our animation. Go ahead and toggle the "GPU Accelerated" button to on ( it should turn green ) and run your time line profile again and reselect a bar into the view area you should now see something like this.
 
-<img src="/images/posts/the_web_animations_you_have_always_wanted/timeline-accelerated.png" >
+<img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-accelerated.png" >
 
 <!-- image at /images/timeline-accelerated.png BOOG:NEEDS COMPRESSION  sidenote: make sure that you have selected only on bar in the screen shot-->
 
