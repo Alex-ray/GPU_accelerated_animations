@@ -210,11 +210,9 @@ Lets now take a look at just how we can apply this new found knowledge to create
 
 Fast and smooth web animations are somewhat of a rarity these days. But with new browser technology it has never been easier, it's simply a matter of knowing how to use the right tools. And I am going to show you how.
 
-To make things easier ( and more fun ), I have created some HTML, CSS and JavaScript that we can use to experiment on throughout the rest of this article. You can download the example material <a href="http://github.com/alex-ray/" target="_blank">here</a>,check it out on Github <a href="http://github.com/alex-ray/gpu-acclerated-color-wheel" target="_blank">here</a> or simply head view it on the web <a href="/demo/gpu_accelerated_color_wheel/" target="_blank">here.</a>
+To make things easier ( and more fun ), I have create a small website we can user to experiment with throughout the rest of this article which you can find <a href="/demo/gpu_accelerated_color_wheel/" target="_blank">here.</a> Alternatively you can download the files yourself <a href="https://github.com/Alex-ray/GPU_accelerated_animations/archive/master.zip" target="_blank">here</a> or simply check it out on Github <a href="https://github.com/Alex-ray/GPU_accelerated_animations" target="_blank">here</a>.
 
-Unzip the file and open up the ```index.html``` file in your Chrome Browser. ( or just open the web page in your browser )
-
-You should see a color wheel bouncing around the screen and a bunch of control in the top left corner of the screen. Don't worry about these just yet all you need to know is that the flood toggle might freeze your browser ( its a infinite loop flooding the main thread ).
+Navigate to the demo and you should see a color wheel bouncing around the screen with some control in the top left corner of the screen. Don't worry about these just yet all you need to know is that the flood toggle might freeze your browser ( its a infinite loop which floods the main thread ).
 
 With that out of the way lets jump right in and take a look at what kind of animations we got going on here. To do this your going to need to open up you Chrome Developer Tools ( view > Developer > Developer Tools ) and select the ```time line tab```.
 
@@ -222,15 +220,11 @@ Your screen should now look something like this.
 
 <img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-tab.png" >
 
-<!-- Image at /images/timeline-tab.png BOOG: NEEDS COMPRESSION-->
-
 The time line view lets you measure and visualizes the rendering process on a frame by frame basis over a certain amount of time.
 
 We can start recording a time line by clicking on the gray circle in the left hand corner of the developer tools. Press it to start recording, wait a second and press it a second time to stop recording ( it should be red this time ). You will then see a bar graph that looks something similar to this.
 
 <img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-graph.png" >
-
-<!-- Image at /images/timeline-graph.png BOOG: NEEDS COMPRESION -->
 
 Each vertical bar represents A frame and the two horizontal lines represent the 30 and 60 frames per second markers respectively.
 
@@ -250,8 +244,6 @@ The most obvious way to speed things up and improve our frame rate is to minimiz
 To do this we are going to "hardware accelerate" our animation. Go ahead and toggle the "GPU Accelerated" button to on ( it should turn green ) and run your time line profile again and reselect a bar into the view area you should now see something like this.
 
 <img src="http://alexjray.com/images/posts/the_web_animations_you_have_always_wanted/timeline-accelerated.png" >
-
-<!-- image at /images/timeline-accelerated.png BOOG:NEEDS COMPRESSION  sidenote: make sure that you have selected only on bar in the screen shot-->
 
 Take a look at the records bar, you can see that we now have only one of these render events the ***Composite Layer*** event ( green ) and the ***Layout*** and ***Paint*** events are now gone. 
 
@@ -363,3 +355,6 @@ The downside with CSS animations is that they lack the expressive power of JavaS
 And with that I leave you to your own creative to create all the fast, smooth and sexy animations you can think of. ( maybe not ***all*** )
 
 If you have any questions, comments or criticism please give me a shout on twitter <a href="http://twitter.com/_alexray">@_alexray</a> or email <a href="mailto:mail@alexjray.com">mail@alexjray.com</a>
+
+
+
